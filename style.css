@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+/* ### Primary
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+## Gradients
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+### Neutral
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%) */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: hsl(221, 100%, 96%);
+  font-family: "Hanken Grotesk", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+#main__container {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  max-height: 100vh;
+  border-radius: 16px;
+  max-height: 310px;
+  max-width: 500px;
+  box-shadow: 2px 2px 50px rgb(175, 174, 174);
+}
+h1 {
+  font-size: 18px;
+}
+h2 {
+  font-size: 14px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+.left__card {
+  max-width: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 20px;
+  border-radius: 16px;
+}
+ul li:nth-child(1) {
+  font-size: 12px;
+  padding-top: 12px;
+}
+ul li:nth-child(2) {
+  background-image: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  padding: 20px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin: 25px 0;
+}
+.big-result {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.your-result {
+  color: hsl(241, 100%, 89%);
+  font-size: 0.85rem;
+}
+.hundred {
+  color: hsl(241, 100%, 89%);
+}
+ul li:nth-child(2) span {
+  font-size: 8px;
+  position: relative;
+  top: -50%;
+  right: 0%;
+}
+.higher-score {
+  color: hsl(241, 100%, 89%);
+  font-size: 12px;
+  padding: 12px 30px;
+}
+
+/* -------------------------------------Summary card----------------------------------- */
+.right__card {
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  width: 230px;
+  border-radius: 0 16px 16px 0;
+}
+.sub__right__card {
+  display: grid;
+}
+ol li {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin: 6px 0;
+}
+li > img {
+  margin-right: -30px;
+}
+.summary__reaction {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+.reaction {
+  color: hsl(0, 100%, 67%);
+}
+.summary__memory {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+.memory {
+  color: hsl(39, 100%, 56%);
+}
+.summary__verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+.verbal {
+  color: hsl(166, 100%, 37%);
+}
+.summary__visual {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+.visual {
+  color: hsl(234, 85%, 45%);
+}
+.percentage {
+  color: hsl(241, 100%, 89%);
+}
+.stat,
+h2 {
+  color: hsl(224, 30%, 27%);
+}
+button {
+  background: hsl(224, 30%, 27%);
+  color: hsl(241, 100%, 89%);
+  padding: 8px;
+  border-radius: 25px;
+  width: 250px;
+  max-width: 100%;
+  margin: 20px 0;
+  border: none;
+}
+button:hover {
+  background-color: hsl(234, 85%, 45%);
+  cursor: pointer;
+}
+/* -------------------------------------Footer----------------------------------- */
+
+.attribution {
+  font-size: 8px;
+  text-align: center;
+  padding: 8px 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* -------------------------------------Media Query----------------------------------- */
+
+@media screen and (max-width: 768px) {
+  #main__container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px 16px 0 0;
+    max-height: 100%;
+  }
+  .right__card {
+    border-radius: 0;
+  }
+}
